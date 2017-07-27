@@ -5,4 +5,16 @@ from mothership.base import MothershipServer
 
 
 class TestMothershipBasic(unittest.TestCase):
-    pass
+
+    def test_basic_worker_connection(self):
+        """
+        Purpose: Test regular running of worker
+        Expectation: startup system, hit the reddit user and parse the data, fail to send to mothership (exception)
+
+        :precondition: Mothership server not running
+        :return:
+        """
+        server = MothershipServer()
+
+        # Can't connect to mother, so should raise ConnectionRefusedError, but should run everything else
+        self.assertRaises(ConnectionRefusedError, server.run)
