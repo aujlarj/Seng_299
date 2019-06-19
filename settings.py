@@ -13,5 +13,3 @@ WORKERS = {
 }
 
 BUFFER_SIZE = 5120
-
-// asdfasdf
