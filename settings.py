@@ -8,7 +8,7 @@ WORKERS = {
     'host': '127.0.0.1',
     'port_start': 9000,
     'port_end': 9999,
-    'max_links': 1,
+    'max_links': 1.0,
     'link_delay': 0.25,
 }
 
